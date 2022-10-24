@@ -6,7 +6,8 @@ class User < ApplicationRecord
          
   has_many :post_images, dependent: :destroy 
   
-  has_one_attached :profile_image
+  # profile_image: 画像が保存されているカラム名(テーブルへの記述は不要)
+  has_one_attached :profile_image  
   
   def get_profile_image(width, height)
     unless profile_image.attached?
