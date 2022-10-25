@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   has_many :post_images, dependent: :destroy 
+  has_many :post_comments, dependent: :destroy
   
   # profile_image: 画像が保存されているカラム名(テーブルへの記述は不要)
   has_one_attached :profile_image  
