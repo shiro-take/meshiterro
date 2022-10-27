@@ -6,3 +6,6 @@
   <% end %>
 </div>
 
+<!--部分テンプレートファイルの呼び出し-->
+<!-- render [部分テンプレートファイルの指定], [ローカル変数]:[渡す値] -->
+<%= render 'post_images/list', post_images: @post_images %>
